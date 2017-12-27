@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20-dic-2017, 13:45:34
+    Author     : SERVIDOR
+*/
+
+#input-file-sandigram{
+
+}
+#input-file-sandigram #upload{
+    margin-top: 15px;
+    display: none;
+}
+#input-file-sandigram #upload.activo{    
+    display: inline-block;
+}
+
+/*
+ * FILE UPLOAD
+ */
+
+#imagen-preview{
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    border: 2px solid #eee;
+    background-size: cover;
+    display: none;
+}
+#imagen-preview.activo{
+    display: block;
+}
+
+
+/*
+ * CARD
+ */
+.uk-card-media-bg{
+    min-height: 220px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
