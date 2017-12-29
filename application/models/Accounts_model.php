@@ -7,6 +7,7 @@ class Accounts_model extends CI_Model {
     public function __construct() {
         parent::__construct();
         $this->load->database();
+        $this->load->library('session');
     }
 
     public function get_accounts($user) {
@@ -15,13 +16,19 @@ class Accounts_model extends CI_Model {
         return $accounts;
     }
 
+    public function get_account($account_id) {
+        $query = $this->db->get_where($this->table_name, array('id' => $account_id));
+        $account = $query->result();
+        return isset($account[0]) ? $account[0] : FALSE;
+    }
+
     public function set_active($account_id) {
-        $this->session->set_userdata("active_account_id", $account_id);
+        $account = $this->get_account($account_id);
+        $this->session->set_userdata("active_account", $account);
     }
 
     public function get_active() {
-        $this->load->library('session');
-        return $this->session->active_account_id;
+        return $this->session->active_account;
     }
 
     public function new_account($nombre) {

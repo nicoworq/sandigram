@@ -6,9 +6,9 @@ $routeClass = $this->router->fetch_class();
         <div class="uk-container uk-container-expand">
             <div uk-navbar>
                 <ul class="uk-navbar-nav">
-                    <li class="<?php navActiva($routeClass, "dashboard"); ?>">
+                   <!-- <li class="<?php navActiva($routeClass, "dashboard"); ?>">
                         <a href="<?php echo site_url("dashboard") ?>">Dashboard</a>
-                    </li>
+                    </li>-->
                     <li class="<?php navActiva($routeClass, "posts"); ?>">
                         <a href="<?php echo site_url("posts") ?>">Publicaciones</a>
                     </li>
@@ -19,6 +19,7 @@ $routeClass = $this->router->fetch_class();
                         <a href="<?php echo site_url("accounts") ?>">Cuentas</a>
                     </li>
                 </ul>
+                <div id="active-account"><?php echo $active_account->nombre; ?></div>
             </div>
         </div>
     </nav>

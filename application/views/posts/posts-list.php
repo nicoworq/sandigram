@@ -1,6 +1,6 @@
 <?php
 $this->load->view("common/header-dashboard", array("title" => "Publicaciones"));
-setlocale(LC_ALL, "es_ES");
+
 ?>
 
 <div class="uk-container">
@@ -24,8 +24,8 @@ setlocale(LC_ALL, "es_ES");
                     <p>Selecciona para crear una nueva publicación</p>
                 </div>
             </a>
-            <?php foreach ($posts as $post) { ?>                
-                <a href="<?php echo site_url("/post/" . $post->id) ?>">
+            <?php foreach ($posts as $post) { ?>                   
+                <a href="<?php echo site_url("/posts/{$post->id_publicacion}" ) ?>">
                     <div>
                         <div class="uk-card uk-card-default">
                             <?php
@@ -52,14 +52,7 @@ setlocale(LC_ALL, "es_ES");
 
 <?php
 
-function getDateHuman($mysqlDate) {
 
-    $date = DateTime::createFromFormat("Y-m-d H:i:s", $mysqlDate);
-
-    $dias = array("Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado");
-
-    echo $dias[$date->format('w')] . " " . $date->format('d') . "/" . $date->format('n') . "/" . $date->format('Y') . "a las " . $date->format("h:i");
-}
 
 function getLabelColor($id_estado) {
     $color = "";

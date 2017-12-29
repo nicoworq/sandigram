@@ -32,6 +32,7 @@ class Media extends CI_Controller {
                     $config['max_filename'] = '255';
                     $config['encrypt_name'] = TRUE;
                     $config['max_size'] = '2048'; //2 MB
+                    
                     $this->load->library('upload', $config);
 
                     if (!$this->upload->do_upload('file')) {

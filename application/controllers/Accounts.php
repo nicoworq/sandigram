@@ -8,6 +8,10 @@ class Accounts extends CI_Controller {
         parent::__construct();
         $this->load->library('session');
         $this->load->model("Accounts_model", "Accounts");
+        $this->load->model("Users_model", "Users");
+
+        $this->loggedUser = checkLogged($this->Users, $this->session);
+        $this->activeAccount = $this->Accounts->get_active();
     }
 
     public function index() {
@@ -17,13 +21,14 @@ class Accounts extends CI_Controller {
         $this->load->view("accounts/select-account-view", array(
             "accounts" => $accounts,
             "alert" => $this->session->flashdata("alert"),
-            "alert_message" => $this->session->flashdata("alert_message"))
+            "alert_message" => $this->session->flashdata("alert_message"),
+            "active_account" => $this->activeAccount)
         );
     }
 
     public function select_account($account_id) {
         $this->Accounts->set_active($account_id);
-        redirect("/dashboard");
+        redirect("/posts");
     }
 
     public function new_account() {
@@ -31,7 +36,7 @@ class Accounts extends CI_Controller {
         if ($this->session->flashdata('error') !== NULL) {
             $error = $this->session->flashdata('error');
         }
-        $this->load->view("accounts/new-account-view", array("error", $error));
+        $this->load->view("accounts/new-account-view", array("error", $error, "active_account" => $this->activeAccount));
     }
 
     public function new_account_action() {

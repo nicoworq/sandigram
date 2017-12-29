@@ -6,6 +6,7 @@ $this->load->view("common/header-dashboard", array("title" => "Nueva publicació
 
 <div class="uk-container">
     <div class="uk-section">
+        <h2 class="uk-text-lead">Nueva publicación</h2>
         <?php
         if ($alert) {
             ?>

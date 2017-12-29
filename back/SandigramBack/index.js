@@ -2,7 +2,7 @@ var Client = require('instagram-private-api').V1;
 var device = new Client.Device('nico.sandia');
 var storage = new Client.CookieFileStorage(__dirname + '/cookies/someuser.json');
 
-
+   
 var mysql = require('mysql');
 var moment = require("moment");
 
@@ -18,7 +18,6 @@ var SandiGram = {
             password: '',
             database: 'sandigram'
         });
-
 
         var minutes = 1, the_interval = minutes * 60 * 1000;
 

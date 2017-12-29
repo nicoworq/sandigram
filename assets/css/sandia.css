@@ -35,7 +35,6 @@ and open the template in the editor.
     display: block;
 }
 
-
 /*
  * CARD
  */
@@ -45,4 +44,14 @@ and open the template in the editor.
     background-repeat: no-repeat;
 }
 
+/*
+ * HEADER
+ */
 
+#active-account{
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}

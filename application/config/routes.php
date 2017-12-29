@@ -74,8 +74,11 @@ $route['dashboard'] = 'dashboard';
 //POSTS
 $route['posts'] = "posts";
 $route['posts/(:num)'] = "posts/edit_post/$1";
+$route['posts/edit-post-action'] = "posts/edit_post_action";
+
 $route['posts/new-post'] = "posts/new_post";
 $route['posts/new-post-action'] = "posts/new_post_action";
+
 
 // AJAX
 

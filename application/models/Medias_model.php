@@ -23,7 +23,7 @@ class Medias_model extends CI_Model {
 
         $sql_insert = "INSERT INTO {$this->table_name} (id_cuenta,nombre_archivo,ruta_completa,ancho,alto,tamaño,fecha_creacion) VALUES (? , ? , ? , ? , ?, ? ,NOW()) ";
 
-        $this->db->query($sql_insert, array($cuenta_activa, $nombre_archivo, $ruta_completa, $ancho, $alto, $tamaño));
+        $this->db->query($sql_insert, array($cuenta_activa->id, $nombre_archivo, $ruta_completa, $ancho, $alto, $tamaño));
 
         if ($this->db->affected_rows()) {
             return $this->db->insert_id();
