@@ -5,7 +5,7 @@ $this->load->view("common/header-dashboard", array("title" => "Nueva publicació
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 <div class="uk-container">
-    <div class="uk-section">
+    <div class="uk-section-xsmall">
         <h2 class="uk-text-lead">Nueva publicación</h2>
         <?php
         if ($alert) {
@@ -33,7 +33,7 @@ $this->load->view("common/header-dashboard", array("title" => "Nueva publicació
                 </div>
             </div>
             <div class="uk-margin">
-                <label class="uk-form-label" for="form-stacked-text">Subir archivo de imagen</label>
+                <label class="uk-form-label" for="form-stacked-text">Subir archivo multimedia (gif | jpg | png | mp4)</label>
                 <div class="uk-form-controls">
                     <div id="input-file-sandigram">
                         <p id="msg"></p>
@@ -44,7 +44,15 @@ $this->load->view("common/header-dashboard", array("title" => "Nueva publicació
                         <div id="upload" class="uk-button uk-button-default">Subir Archivo</div>
                     </div>
                 </div>
-
+            </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Tipo de publicación</label>
+                <div class="uk-form-controls">
+                    <select name="id_tipo" class="uk-select">
+                        <option value="1" selected="selected">Timeline</option>
+                        <option value="2">Story</option>
+                    </select>
+                </div>
             </div>
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text">Fecha publicación</label>

@@ -19,7 +19,7 @@ $routeClass = $this->router->fetch_class();
                         <a href="<?php echo site_url("accounts") ?>">Cuentas</a>
                     </li>
                 </ul>
-                <div id="active-account"><?php echo $active_account->nombre; ?></div>
+                <div id="active-account"><?php echo isset($active_account->nombre) ? $active_account->nombre : ""; ?></div>
             </div>
         </div>
     </nav>

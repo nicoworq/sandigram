@@ -41,8 +41,10 @@ class Accounts extends CI_Controller {
 
     public function new_account_action() {
         $nombre = $this->input->post("nombre");
+        $user = $this->input->post("user");
+        $password = $this->input->post("password");
 
-        $creada = $this->Accounts->new_account($nombre);
+        $creada = $this->Accounts->new_account($nombre,$user,$password);
         if ($creada) {
             $this->session->set_flashdata("alert", "success");
             $this->session->set_flashdata("alert_message", "Cuenta creada correctamente!");

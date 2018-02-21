@@ -31,7 +31,15 @@ $(document).ready(function (e) {
                 if (response.subido) {
                     UIkit.notification('Archivo subido correctamente!', {pos: 'top-center', status: 'success'});
                     $("#id_medio").val(response.id_medio);
-                    $("#imagen-preview").css('background-image', 'url(' + window.baseUrl + '/uploads/' + response.nombre_archivo + ')').addClass("activo");
+                    
+                    if (!response.es_imagen) {
+                        $("#imagen-preview").html($("<video/>", {controls:true, src: window.baseUrl + '/uploads/' + response.nombre_archivo}));
+                    } else {
+                        $("#imagen-preview").html("");
+                        $("#imagen-preview").css('background-image', 'url(' + window.baseUrl + '/uploads/' + response.nombre_archivo + ')');
+                    }
+                    $("#imagen-preview").addClass("activo");
+
                     archivoSubido = true;
                 } else {
                     UIkit.notification('Error al subir archivo!', {pos: 'top-center', status: 'danger'});
@@ -53,6 +61,12 @@ $(document).ready(function (e) {
     if ($("#imagen-preview").hasClass("activo")) {
         archivoSubido = true;
     }
+
+    $("#eliminar-publicacion").click(function (e) {
+        if (!confirm("Estas seguro?")) {
+            e.preventDefault();
+        }
+    });
 
     $(".validate-change").on("change keyup", function () {
         var permitirSubir = true;

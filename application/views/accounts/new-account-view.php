@@ -13,6 +13,18 @@ $this->load->view("common/header-dashboard", array("title" => "Crear cuenta"));
                     <input required class="uk-input uk-form-width-large" name="nombre" id="form-stacked-text" type="text" placeholder="Cuenta">
                 </div>
             </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Usuario de Instagram</label>
+                <div class="uk-form-controls">
+                    <input required class="uk-input uk-form-width-large" name="user" id="form-stacked-text" type="text" placeholder="Usuario"/>
+                </div>
+            </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Contraseña de Instagram</label>
+                <div class="uk-form-controls">
+                    <input required class="uk-input uk-form-width-large" name="password" id="form-stacked-text" type="text" placeholder="Contraseña"/>
+                </div>
+            </div>
 
             <div class="uk-margin">
                 <div class="uk-inline">                    

@@ -33,5 +33,5 @@ function getDateHuman($mysqlDate) {
 
     $dias = array("Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado");
 
-    return $dias[$date->format('w')] . " " . $date->format('d') . "/" . $date->format('n') . "/" . $date->format('Y') . "a las " . $date->format("h:i");
+    return $dias[$date->format('w')] . " " . $date->format('d') . "/" . $date->format('n') . "/" . $date->format('Y') . " a las " . $date->format("h:i");
 }

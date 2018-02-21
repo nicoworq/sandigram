@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   | Examples:	my-controller/index	-> my_controller/index
   |		my-controller/my-method	-> my_controller/my_method
  */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'posts';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
@@ -78,6 +78,7 @@ $route['posts/edit-post-action'] = "posts/edit_post_action";
 
 $route['posts/new-post'] = "posts/new_post";
 $route['posts/new-post-action'] = "posts/new_post_action";
+$route['posts/delete-post/(:num)'] = "posts/delete_post_action/$1";
 
 
 // AJAX

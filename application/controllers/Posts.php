@@ -30,8 +30,13 @@ class Posts extends CI_Controller {
     }
 
     public function new_post() {
+        $nombre = $this->session->flashdata("nombre");
+        if (!$nombre) {
+            $nombre = $this->activeAccount->nombre;
+        }
+
         $this->load->view("posts/new-post-view", array(
-            'nombre' => $this->session->flashdata("nombre"),
+            'nombre' => $nombre,
             'texto' => $this->session->flashdata("texto"),
             'fecha_publicacion' => $this->session->flashdata("fecha_publicacion"),
             "alert" => $this->session->flashdata("alert"),
@@ -45,7 +50,7 @@ class Posts extends CI_Controller {
         $texto = $this->input->post("texto", TRUE);
         $id_medio = $this->input->post("id_medio", TRUE);
         $fecha_publicacion = $this->input->post("fecha_publicacion", TRUE);
-
+        $id_tipo = $this->input->post("id_tipo", TRUE);
 
         if (is_null($nombre) || is_null($texto) || is_null($id_medio) || empty($fecha_publicacion)) {
             $this->session->set_flashdata("alert", "danger");
@@ -56,7 +61,7 @@ class Posts extends CI_Controller {
             redirect("posts/new-post");
         }
 
-        $creado = $this->Posts->new_post($nombre, $texto, $id_medio, $fecha_publicacion);
+        $creado = $this->Posts->new_post($id_tipo, $nombre, $texto, $id_medio, $fecha_publicacion);
 
         if ($creado) {
             $this->session->set_flashdata("alert", "success");
@@ -88,11 +93,17 @@ class Posts extends CI_Controller {
             redirect("posts");
         }
 
+        $errores = array();
+        if (intval($post->id_estado) === 3) {
+            $errores = $this->Posts->get_errors($post->id_publicacion);
+        }
+
         $this->load->view("posts/edit-post-view", array(
             'post' => $post,
             "alert" => $this->session->flashdata("alert"),
             "alert_message" => $this->session->flashdata("alert_message"),
-            "active_account" => $this->activeAccount
+            "active_account" => $this->activeAccount,
+            "errores" => $errores
         ));
     }
 
@@ -101,6 +112,7 @@ class Posts extends CI_Controller {
         $nombre = $this->input->post("nombre", TRUE);
         $texto = $this->input->post("texto", TRUE);
         $id_medio = $this->input->post("id_medio", TRUE);
+        $id_tipo = $this->input->post("id_tipo", TRUE);
         $fecha_publicacion = $this->input->post("fecha_publicacion", TRUE);
 
 
@@ -113,7 +125,7 @@ class Posts extends CI_Controller {
             redirect("posts/{$id_publicacion}");
         }
 
-        $editado = $this->Posts->edit_post($id_publicacion,$nombre, $texto, $id_medio, $fecha_publicacion);
+        $editado = $this->Posts->edit_post($id_publicacion, $id_tipo, $nombre, $texto, $id_medio, $fecha_publicacion);
 
         if ($editado) {
             $this->session->set_flashdata("alert", "success");
@@ -127,6 +139,20 @@ class Posts extends CI_Controller {
             $this->session->set_flashdata("fecha_publicacion", $fecha_publicacion);
             redirect("posts/{$id_publicacion}");
         }
+    }
+
+    public function delete_post_action($id_publicacion) {
+        $eliminado = $this->Posts->delete_post($id_publicacion);
+
+        if ($eliminado) {
+            $this->session->set_flashdata("alert", "success");
+            $this->session->set_flashdata("alert_message", "Publicación eliminada correctamente!");
+        } else {
+            $this->session->set_flashdata("alert", "danger");
+            $this->session->set_flashdata("alert_message", "Ocurrio un error al eliminar!");
+        }
+
+        redirect("posts");
     }
 
 }

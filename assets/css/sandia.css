@@ -44,6 +44,16 @@ and open the template in the editor.
     background-repeat: no-repeat;
 }
 
+
+/*
+ * CARD CON VIDEO
+ */
+.uk-card-media-bg video{
+    height: 220px;
+    width: 100%;
+    background: black;
+}
+
 /*
  * HEADER
  */

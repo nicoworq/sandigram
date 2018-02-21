@@ -31,11 +31,11 @@ class Accounts_model extends CI_Model {
         return $this->session->active_account;
     }
 
-    public function new_account($nombre) {
+    public function new_account($nombre, $user, $password) {
         $this->load->model("Users_model", "Users");
         $active_user = $this->Users->get_active();
 
-        $data = array("nombre" => $nombre, "id_usuario" => $active_user['id']);
+        $data = array("nombre" => $nombre, "user" => $user, "password" => $password, "id_usuario" => $active_user['id']);
         $this->db->insert($this->table_name, $data);
 
         return $this->db->affected_rows();

@@ -1,10 +1,9 @@
 <?php
 $this->load->view("common/header-dashboard", array("title" => "Publicaciones"));
-
 ?>
 
 <div class="uk-container">
-    <div class="uk-section">
+    <div class="uk-section-xsmall">
         <?php
         if ($alert) {
             ?>
@@ -15,17 +14,39 @@ $this->load->view("common/header-dashboard", array("title" => "Publicaciones"));
             <?php
         }
         ?>
+        <?php
+        if (!is_null($active_account)) {
+            ?>
+            <a href="<?php echo site_url("/posts/new-post") ?>" class="uk-button uk-button-primary">
+                Crear publicación
+            </a>
+            <?php
+        } else {
+            ?>
+            <div class="uk-alert-danger" uk-alert>
+                <a class="uk-alert-close" uk-close></a>
+                <p>No has creado ninguna cuenta</p>
+            </div>
+            <?php
+        }
+        ?>
 
+
+        <br/>
+        <br/>
+
+
+        <?php if (!count($posts)) { ?>
+            <div class="uk-placeholder uk-text-center">
+                No has subido ninguna publicación.
+            </div>
+        <?php } ?>
         <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
 
-            <a href="<?php echo site_url("/posts/new-post") ?>">
-                <div class="uk-card uk-card-default uk-card-body">
-                    <h3 class="uk-card-title">Crear publicación</h3>
-                    <p>Selecciona para crear una nueva publicación</p>
-                </div>
-            </a>
+
+
             <?php foreach ($posts as $post) { ?>                   
-                <a href="<?php echo site_url("/posts/{$post->id_publicacion}" ) ?>">
+                <a href="<?php echo site_url("/posts/{$post->id_publicacion}") ?>">
                     <div>
                         <div class="uk-card uk-card-default">
                             <?php
@@ -34,7 +55,20 @@ $this->load->view("common/header-dashboard", array("title" => "Publicaciones"));
                             ?>
                             <div class="uk-card-badge uk-label <?php echo $label_color; ?>"><?php echo $label; ?></div>
                             <div class="uk-card-media-top">
-                                <div class="uk-card-media-bg" style="background-image: url(<?php echo get_image_src($post->nombre_archivo) ?>)"></div>                                
+                                <?php
+                                if ($post->es_imagen) {
+                                    ?>
+                                    <div class="uk-card-media-bg" style="background-image: url(<?php echo get_image_src($post->nombre_archivo) ?>)"></div>                                
+                                    <?php
+                                } else {
+                                    ?>
+                                    <div class="uk-card-media-bg">
+                                        <video src="<?php echo base_url() . "uploads/{$post->nombre_archivo}"; ?>" controls>                                        
+                                        </video>
+                                    </div>
+                                    <?php
+                                }
+                                ?>
                             </div>
                             <div class="uk-card-body">
                                 <h3 class="uk-card-title uk-margin-remove-bottom"><?php echo $post->nombre ?></h3>
@@ -51,8 +85,6 @@ $this->load->view("common/header-dashboard", array("title" => "Publicaciones"));
 
 
 <?php
-
-
 
 function getLabelColor($id_estado) {
     $color = "";

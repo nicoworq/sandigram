@@ -1,14 +1,14 @@
 var Client = require('instagram-private-api').V1;
-var device = new Client.Device('nico.sandia');
-var storage = new Client.CookieFileStorage(__dirname + '/cookies/someuser.json');
+var device;
+var storage; 
 
-   
+
 var mysql = require('mysql');
 var moment = require("moment");
 
 var SandiGram = {
-    user: 'nico.sandia',
-    pass: 'pepepepe',
+    user: '',
+    pass: '',
     init: function () {
         console.log("inicializo Pool");
         this.dbPool = mysql.createPool({
@@ -19,12 +19,12 @@ var SandiGram = {
             database: 'sandigram'
         });
 
-        var minutes = 1, the_interval = minutes * 60 * 1000;
+        var minutes = 3, the_interval = minutes * 60 * 1000;
 
         setInterval(function () {
             console.log("Loop");
             SandiGram.getPosts();
-        }, 10000);
+        }, the_interval);
 
     },
     dbPool: '',
@@ -46,9 +46,9 @@ var SandiGram = {
             }
         });
     },
-    uploadPhoto: function (idPost, imagePath, caption) {
+    uploadPhoto: function (idPost, imagePath, caption, user, password) {
 
-        Client.Session.create(device, storage, this.user, this.pass)
+        Client.Session.create(device, storage, user, password)
                 .then(function (session) {
                     console.log("session engaged");
                     console.log("uploading photo..");
@@ -112,7 +112,7 @@ var SandiGram = {
     },
     getPosts: function () {
         console.log("traigo posts");
-        var sql = "SELECT p.id, id_estado, p.nombre, texto, fecha_publicacion, nombre_archivo, ruta_completa FROM sandigram.publicaciones p LEFT JOIN medios m ON m.id = p.id_medio LEFT JOIN cuentas c on p.id_cuenta = c.id WHERE p.id_estado = 1;";
+        var sql = "SELECT p.id, id_estado, p.nombre, texto, fecha_publicacion, nombre_archivo, ruta_completa,user,password FROM sandigram.publicaciones p LEFT JOIN medios m ON m.id = p.id_medio LEFT JOIN cuentas c on p.id_cuenta = c.id WHERE p.id_estado = 1 AND p.id_cuenta != 14;";
 
         this.dbPool.getConnection(function (err, connection) {
             if (err) {
@@ -131,15 +131,20 @@ var SandiGram = {
                             var minutosDiff = fechaPost.diff(ahora, "minutes");
                             console.log("fecha", fechaPost)
                             console.log("minutos", minutosDiff)
+
                             if (minutosDiff > -10 && minutosDiff <= 10) {
                                 console.log("lo publico");
-                                SandiGram.uploadPhoto(publicacion.id, publicacion.ruta_completa, publicacion.texto);
+                                var textoPubli = new Buffer(publicacion.texto, 'base64').toString();
+                                
+                                device = new Client.Device(publicacion.user);
+                                storage = new Client.CookieFileStorage(__dirname + '/cookies/'+publicacion.user+'.json');
+                                SandiGram.uploadPhoto(publicacion.id, publicacion.ruta_completa, textoPubli, publicacion.user, publicacion.password);
                             } else {
                                 console.log("no lo publico");
                             }
                         }
                     }
-                }else{
+                } else {
                     console.log(error);
                 }
 
