@@ -7,13 +7,15 @@ class Media extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-
         $this->load->helper(array('form', 'url'));
         $this->load->model("Medias_model", "Medias");
+        $this->load->model("Accounts_model", "Accounts");
+        $this->activeAccount = $this->Accounts->get_active();
     }
 
     function index() {
-        //       $this->load->view('file_upload_ajax', NULL);
+        $media_list = $this->Medias->get_media_list();
+        $this->load->view('media/media-list', array("media_list" => $media_list, "active_account" => $this->activeAccount));
     }
 
     function upload_file() {
@@ -38,7 +40,7 @@ class Media extends CI_Controller {
                         $response = array("subido" => FALSE, 'error' => $this->upload->display_errors());
                     } else {
                         $id_medio = $this->upload_file_database($this->upload->data());
-                        
+
                         $nombre_archivo = $this->upload->data()["file_name"];
                         $es_imagen = $this->upload->data()["is_image"];
                         if ($id_medio) {

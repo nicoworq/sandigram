@@ -47,11 +47,23 @@ class Post {
         return FALSE;
     }
 
+    public function showPostMinutesToPublish() {
+
+        $now = new DateTime();
+        $fecha_publicacion_date = new DateTime($this->fecha_publicacion);
+        $diff = abs($fecha_publicacion_date->getTimestamp() - $now->getTimestamp()) / 60;
+        echo intval($diff) . " minutos para publicar";
+    }
+
+    public function isWeekend() {
+        return (date('N', strtotime($this->fecha_publicacion)) >= 6);
+    }
+
     public function getPostText() {
         return base64_decode($this->texto);
     }
-    
-    public function updateStatus(){
+
+    public function updateStatus() {
         
     }
 

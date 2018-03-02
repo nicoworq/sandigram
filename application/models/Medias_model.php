@@ -30,4 +30,13 @@ class Medias_model extends CI_Model {
         };
     }
 
+    public function get_media_list() {
+
+        $sql_list = "SELECT * FROM {$this->table_name};";
+
+        $query = $this->db->query($sql_list);
+
+        return $query->result();
+    }
+
 }

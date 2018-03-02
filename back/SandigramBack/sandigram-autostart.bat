@@ -1,1 +1,0 @@
-node C:\xampp\htdocs\sandigram\back\SandigramBack\index.js

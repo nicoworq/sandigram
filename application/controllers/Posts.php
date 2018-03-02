@@ -48,6 +48,11 @@ class Posts extends CI_Controller {
     public function new_post_action() {
         $nombre = $this->input->post("nombre", TRUE);
         $texto = $this->input->post("texto", TRUE);
+        $pregunta = $this->input->post("pregunta", TRUE);
+        $respuesta_1 = $this->input->post("respuesta_1", TRUE);
+        $respuesta_2 = $this->input->post("respuesta_2", TRUE);
+        $pos_x = $this->input->post("pos_x", TRUE);
+        $pos_y = $this->input->post("pos_y", TRUE);
         $id_medio = $this->input->post("id_medio", TRUE);
         $fecha_publicacion = $this->input->post("fecha_publicacion", TRUE);
         $id_tipo = $this->input->post("id_tipo", TRUE);
@@ -61,7 +66,7 @@ class Posts extends CI_Controller {
             redirect("posts/new-post");
         }
 
-        $creado = $this->Posts->new_post($id_tipo, $nombre, $texto, $id_medio, $fecha_publicacion);
+        $creado = $this->Posts->new_post($id_tipo, $nombre, $texto, $pregunta, $respuesta_1, $respuesta_2, $pos_x, $pos_y, $id_medio, $fecha_publicacion);
 
         if ($creado) {
             $this->session->set_flashdata("alert", "success");
@@ -111,6 +116,11 @@ class Posts extends CI_Controller {
         $id_publicacion = $this->input->post("id_publicacion", TRUE);
         $nombre = $this->input->post("nombre", TRUE);
         $texto = $this->input->post("texto", TRUE);
+        $pregunta = $this->input->post("pregunta", TRUE);
+        $respuesta_1 = $this->input->post("respuesta_1", TRUE);
+        $respuesta_2 = $this->input->post("respuesta_2", TRUE);
+        $pos_x = $this->input->post("pos_x", TRUE);
+        $pos_y = $this->input->post("pos_y", TRUE);
         $id_medio = $this->input->post("id_medio", TRUE);
         $id_tipo = $this->input->post("id_tipo", TRUE);
         $fecha_publicacion = $this->input->post("fecha_publicacion", TRUE);
@@ -125,7 +135,7 @@ class Posts extends CI_Controller {
             redirect("posts/{$id_publicacion}");
         }
 
-        $editado = $this->Posts->edit_post($id_publicacion, $id_tipo, $nombre, $texto, $id_medio, $fecha_publicacion);
+        $editado = $this->Posts->edit_post($id_publicacion, $id_tipo, $nombre, $texto, $pregunta, $respuesta_1, $respuesta_2, $pos_x, $pos_y, $id_medio, $fecha_publicacion);
 
         if ($editado) {
             $this->session->set_flashdata("alert", "success");

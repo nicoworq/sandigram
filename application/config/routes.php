@@ -81,6 +81,13 @@ $route['posts/new-post-action'] = "posts/new_post_action";
 $route['posts/delete-post/(:num)'] = "posts/delete_post_action/$1";
 
 
-// AJAX
+//MEDIA
+$route['media'] = "media";
 
+// AJAX
 $route['media/upload_file'] = "media/upload_file";
+
+//AJAX SERVICIO LAST SEEN
+$route['service/last_seen'] = "service/is_service_active";
+
+

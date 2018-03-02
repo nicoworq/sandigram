@@ -20,6 +20,8 @@ $this->load->view("common/header-dashboard", array("title" => "Publicaciones"));
             <a href="<?php echo site_url("/posts/new-post") ?>" class="uk-button uk-button-primary">
                 Crear publicación
             </a>
+            <a class="uk-button uk-button-secondary uk-float-right" target="blank" href="https://instagram.com/<?php echo $active_account->user; ?>">Ir a Instagram</a>
+
             <?php
         } else {
             ?>
@@ -48,11 +50,19 @@ $this->load->view("common/header-dashboard", array("title" => "Publicaciones"));
             <?php foreach ($posts as $post) { ?>                   
                 <a href="<?php echo site_url("/posts/{$post->id_publicacion}") ?>">
                     <div>
-                        <div class="uk-card uk-card-default">
+                        <div class="uk-card uk-card-default sandigram-post">
                             <?php
                             $label = $post->estado;
                             $label_color = getLabelColor($post->id_estado);
                             ?>
+
+                            <?php if (intval($post->id_tipo) === 2) { ?>
+                                <div class="uk-card-badge uk-label uk-label-warning sandigram-label-story">Story</div>
+                            <?php } ?>
+                            <?php if (intval($post->id_tipo) === 3) { ?>
+                                <div class="uk-card-badge uk-label uk-label-warning sandigram-label-story">Poll</div>
+                            <?php } ?>
+
                             <div class="uk-card-badge uk-label <?php echo $label_color; ?>"><?php echo $label; ?></div>
                             <div class="uk-card-media-top">
                                 <?php
@@ -70,10 +80,18 @@ $this->load->view("common/header-dashboard", array("title" => "Publicaciones"));
                                 }
                                 ?>
                             </div>
-                            <div class="uk-card-body">
-                                <h3 class="uk-card-title uk-margin-remove-bottom"><?php echo $post->nombre ?></h3>
-                                <p class="uk-text-meta uk-margin-remove-top"><time datetime="<?php echo $post->fecha_publicacion; ?>"><?php echo getDateHuman($post->fecha_publicacion); ?></time></p>
-
+                            <div class="uk-card-body ">
+                                <p class="uk-text-meta uk-margin-remove-top sandigram-post-fecha"><time datetime="<?php echo $post->fecha_publicacion; ?>"><?php echo getDateHuman($post->fecha_publicacion); ?></time></p>
+                                <p class="uk-text-meta uk-margin-remove-bottom sandigram-post-texto">
+                                    <?php
+                                    if (intval($post->id_tipo) == 1) {
+                                        echo base64_decode($post->texto);
+                                    }
+                                    if (intval($post->id_tipo) == 3) {
+                                        echo $post->pregunta;
+                                    }
+                                    ?>
+                                </p>
                             </div>
                         </div>
                     </div>

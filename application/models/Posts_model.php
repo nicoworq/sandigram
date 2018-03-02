@@ -16,7 +16,7 @@ class Posts_model extends CI_Model {
         if (!isset($cuenta_activa->id)) {
             return array();
         }
-        $sql = "SELECT p.id as id_publicacion, id_estado, estado, nombre, nombre_archivo, texto, es_imagen, fecha_publicacion FROM publicaciones p 
+        $sql = "SELECT p.id as id_publicacion, id_tipo, id_estado, estado, nombre, nombre_archivo, texto, pregunta,pos_x, pos_y, es_imagen, fecha_publicacion FROM publicaciones p 
                 LEFT JOIN medios m ON p.id_medio = m.id
                 LEFT JOIN publicaciones_estados pe ON p.id_estado = pe.id
                 WHERE p.id_cuenta = ? ORDER BY p.fecha_creacion DESC;";
@@ -31,7 +31,7 @@ class Posts_model extends CI_Model {
             return false;
         }
         $cuenta_activa = $this->Accounts->get_active();
-        $sql = "SELECT p.id AS id_publicacion, id_estado,id_tipo, estado, nombre,m.id AS id_medio, nombre_archivo, texto,es_imagen, fecha_publicacion FROM publicaciones p 
+        $sql = "SELECT p.id AS id_publicacion, id_estado,id_tipo, estado, nombre,m.id AS id_medio, nombre_archivo, texto, pregunta, respuesta_1, respuesta_2,pos_x, pos_y, es_imagen, fecha_publicacion FROM publicaciones p 
                 LEFT JOIN medios m ON p.id_medio = m.id
                 LEFT JOIN publicaciones_estados pe ON p.id_estado = pe.id
                 WHERE p.id_cuenta = ? AND p.id = ? ;";
@@ -40,24 +40,24 @@ class Posts_model extends CI_Model {
         return $post;
     }
 
-    public function new_post($id_tipo, $nombre, $texto, $id_medio, $fecha_publicacion) {
+    public function new_post($id_tipo, $nombre, $texto, $pregunta, $respuesta_1, $respuesta_2, $pos_x, $pos_y, $id_medio, $fecha_publicacion) {
 
         $cuenta_activa = $this->Accounts->get_active();
 
-        $sql_insert = "INSERT INTO {$this->table_name} (id_cuenta,id_tipo,id_medio,nombre,texto,fecha_publicacion,fecha_creacion) VALUES (?, ? , ? , ? , ? , ? ,NOW()) ";
+        $sql_insert = "INSERT INTO {$this->table_name} (id_cuenta,id_tipo,id_medio,nombre,texto,pregunta,respuesta_1,respuesta_2, pos_x, pos_y ,fecha_publicacion,fecha_creacion) VALUES (?, ? , ? , ? , ? , ? , ?, ? , ? , ? , ? ,NOW()) ";
 
-        $this->db->query($sql_insert, array($cuenta_activa->id, $id_tipo, $id_medio, $nombre, base64_encode($texto), $fecha_publicacion));
+        $this->db->query($sql_insert, array($cuenta_activa->id, $id_tipo, $id_medio, $nombre, base64_encode($texto), $pregunta, $respuesta_1, $respuesta_2, $pos_x, $pos_y, $fecha_publicacion));
 
         return $this->db->affected_rows();
     }
 
-    public function edit_post($id_publicacion, $id_tipo, $nombre, $texto, $id_medio, $fecha_publicacion) {
+    public function edit_post($id_publicacion, $id_tipo, $nombre, $texto, $pregunta, $respuesta_1, $respuesta_2, $pos_x, $pos_y, $id_medio, $fecha_publicacion) {
 
         $cuenta_activa = $this->Accounts->get_active();
 
-        $sql_insert = "UPDATE {$this->table_name}  SET id_estado = 1, id_tipo = ? , id_medio = ?,nombre = ?,texto = ?,fecha_publicacion = ? WHERE id_cuenta = ? AND id = ?; ";
+        $sql_insert = "UPDATE {$this->table_name}  SET id_estado = 1, id_tipo = ? , id_medio = ?,nombre = ?,texto = ?, pregunta = ?, respuesta_1 = ? , respuesta_2 = ?, pos_x = ?, pos_y = ? ,fecha_publicacion = ? WHERE id_cuenta = ? AND id = ?; ";
 
-        $this->db->query($sql_insert, array($id_tipo, $id_medio, $nombre, base64_encode($texto), $fecha_publicacion, $cuenta_activa->id, $id_publicacion));
+        $this->db->query($sql_insert, array($id_tipo, $id_medio, $nombre, base64_encode($texto), $pregunta, $respuesta_1, $respuesta_2, $pos_x, $pos_y, $fecha_publicacion, $cuenta_activa->id, $id_publicacion));
 
         return $this->db->affected_rows();
     }
