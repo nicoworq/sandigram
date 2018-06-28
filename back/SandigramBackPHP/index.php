@@ -9,7 +9,7 @@ error_reporting(E_ALL);
 
 ini_set("log_errors", 1);
 ini_set("error_log", "php-error.log");
-error_log( "Loading Sandigrameee" );
+error_log("Loading Sandigrameee");
 
 
 
@@ -19,7 +19,7 @@ include_once 'classes/Manage_Posts.php';
 $manage = new Manage_Posts();
 
 while (TRUE) {
-    
+
     $manage->updateServiceLastSeen();
 
     echo "\n\nTRAIGO POSTS:\n\n";
@@ -29,9 +29,9 @@ while (TRUE) {
         echo "No hay publicaciones \n\n";
     }
     foreach ($posts as $post) {
-        
+
         echo $post->user . " |  ";
-        echo $post->fecha_publicacion . " | ";        
+        echo $post->fecha_publicacion . " | ";
         if ($post->isPostToPublish()) {
             echo "publicoo \n\n";
             $manage->publishPost($post);
@@ -44,6 +44,19 @@ while (TRUE) {
         }
         echo "\n\n";
     }
+
+    $postError = $manage->getPostsWithError();
+
+    if (count($postError)) {
+        echo "Hay publicaciones con error!!! \n\n";
+    }
+
+    foreach ($postError as $post) {
+        echo $post->user . " |  ";
+        echo $post->fecha_publicacion . " | ";
+        echo "\n\n";
+    }
+
     echo "=================\n\n";
     sleep(300);
 }

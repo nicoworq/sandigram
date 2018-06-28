@@ -5,3 +5,180 @@
 [02-Mar-2018 11:43:03 America/Buenos_Aires] Loading Sandigrameee
 [02-Mar-2018 11:44:36 America/Buenos_Aires] Loading Sandigrameee
 [02-Mar-2018 11:46:59 America/Buenos_Aires] Loading Sandigrameee
+[05-Mar-2018 09:15:31 America/Buenos_Aires] Loading Sandigrameee
+[06-Mar-2018 09:15:07 America/Buenos_Aires] Loading Sandigrameee
+[07-Mar-2018 08:41:41 America/Buenos_Aires] Loading Sandigrameee
+[08-Mar-2018 08:57:53 America/Buenos_Aires] Loading Sandigrameee
+[09-Mar-2018 09:26:18 America/Buenos_Aires] Loading Sandigrameee
+[12-Mar-2018 09:06:21 America/Buenos_Aires] Loading Sandigrameee
+[12-Mar-2018 13:06:42 America/Buenos_Aires] PHP Warning:  Error while sending QUERY packet. PID=5096 in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 36
+[12-Mar-2018 13:10:55 America/Buenos_Aires] Loading Sandigrameee
+[13-Mar-2018 08:43:28 America/Buenos_Aires] Loading Sandigrameee
+[13-Mar-2018 12:18:49 America/Buenos_Aires] PHP Warning:  Error while sending QUERY packet. PID=3304 in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 36
+[13-Mar-2018 12:25:32 America/Buenos_Aires] Loading Sandigrameee
+[14-Mar-2018 09:23:50 America/Buenos_Aires] Loading Sandigrameee
+[14-Mar-2018 12:07:28 America/Buenos_Aires] Loading Sandigrameee
+[14-Mar-2018 12:10:05 America/Buenos_Aires] Loading Sandigrameee
+[15-Mar-2018 09:29:53 America/Buenos_Aires] Loading Sandigrameee
+[15-Mar-2018 11:21:49 America/Buenos_Aires] Loading Sandigrameee
+[15-Mar-2018 12:01:42 America/Buenos_Aires] Loading Sandigrameee
+[15-Mar-2018 12:02:30 America/Buenos_Aires] Loading Sandigrameee
+[15-Mar-2018 12:04:33 America/Buenos_Aires] Loading Sandigrameee
+[15-Mar-2018 15:44:32 America/Buenos_Aires] Loading Sandigrameee
+[16-Mar-2018 09:17:15 America/Buenos_Aires] Loading Sandigrameee
+[16-Mar-2018 13:40:31 America/Buenos_Aires] Loading Sandigrameee
+[19-Mar-2018 09:11:48 America/Buenos_Aires] Loading Sandigrameee
+[20-Mar-2018 09:19:30 America/Buenos_Aires] Loading Sandigrameee
+[21-Mar-2018 09:26:42 America/Buenos_Aires] Loading Sandigrameee
+[22-Mar-2018 09:17:46 America/Buenos_Aires] Loading Sandigrameee
+[22-Mar-2018 12:49:33 America/Buenos_Aires] Loading Sandigrameee
+[22-Mar-2018 13:01:25 America/Buenos_Aires] Loading Sandigrameee
+[23-Mar-2018 09:09:27 America/Buenos_Aires] Loading Sandigrameee
+[26-Mar-2018 09:08:25 America/Buenos_Aires] Loading Sandigrameee
+[26-Mar-2018 09:52:14 America/Buenos_Aires] Loading Sandigrameee
+[26-Mar-2018 09:52:16 America/Buenos_Aires] PHP Warning:  mysqli::__construct(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 26
+[26-Mar-2018 09:52:16 America/Buenos_Aires] PHP Fatal error:  Failed to conencto to MySQL: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 30
+[26-Mar-2018 09:54:21 America/Buenos_Aires] Loading Sandigrameee
+[27-Mar-2018 08:59:32 America/Buenos_Aires] Loading Sandigrameee
+[27-Mar-2018 11:07:31 America/Buenos_Aires] Loading Sandigrameee
+[28-Mar-2018 09:14:10 America/Buenos_Aires] Loading Sandigrameee
+[28-Mar-2018 11:49:09 America/Buenos_Aires] Loading Sandigrameee
+[03-Apr-2018 09:23:37 America/Buenos_Aires] Loading Sandigrameee
+[04-Apr-2018 09:09:13 America/Buenos_Aires] Loading Sandigrameee
+[05-Apr-2018 09:17:39 America/Buenos_Aires] Loading Sandigrameee
+[06-Apr-2018 07:49:39 America/Buenos_Aires] Loading Sandigrameee
+[09-Apr-2018 09:04:41 America/Buenos_Aires] Loading Sandigrameee
+[09-Apr-2018 12:38:43 America/Buenos_Aires] Loading Sandigrameee
+[10-Apr-2018 09:15:59 America/Buenos_Aires] Loading Sandigrameee
+[11-Apr-2018 09:11:48 America/Buenos_Aires] Loading Sandigrameee
+[12-Apr-2018 09:20:53 America/Buenos_Aires] Loading Sandigrameee
+[12-Apr-2018 17:47:05 America/Buenos_Aires] Loading Sandigrameee
+[13-Apr-2018 08:54:41 America/Buenos_Aires] Loading Sandigrameee
+[16-Apr-2018 09:20:19 America/Buenos_Aires] Loading Sandigrameee
+[17-Apr-2018 09:13:34 America/Buenos_Aires] Loading Sandigrameee
+[18-Apr-2018 09:14:14 America/Buenos_Aires] Loading Sandigrameee
+[19-Apr-2018 09:13:39 America/Buenos_Aires] Loading Sandigrameee
+[20-Apr-2018 09:21:18 America/Buenos_Aires] Loading Sandigrameee
+[23-Apr-2018 09:06:25 America/Buenos_Aires] Loading Sandigrameee
+[24-Apr-2018 09:07:02 America/Buenos_Aires] Loading Sandigrameee
+[25-Apr-2018 08:56:05 America/Buenos_Aires] Loading Sandigrameee
+[26-Apr-2018 09:20:50 America/Buenos_Aires] Loading Sandigrameee
+[26-Apr-2018 09:41:22 America/Buenos_Aires] Loading Sandigrameee
+[27-Apr-2018 08:35:43 America/Buenos_Aires] Loading Sandigrameee
+[02-May-2018 09:17:55 America/Buenos_Aires] Loading Sandigrameee
+[02-May-2018 09:17:57 America/Buenos_Aires] PHP Warning:  mysqli::__construct(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 26
+[02-May-2018 09:17:57 America/Buenos_Aires] PHP Fatal error:  Failed to conencto to MySQL: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 30
+[02-May-2018 11:17:35 America/Buenos_Aires] Loading Sandigrameee
+[02-May-2018 14:45:29 America/Buenos_Aires] Loading Sandigrameee
+[03-May-2018 08:17:09 America/Buenos_Aires] Loading Sandigrameee
+[03-May-2018 15:01:45 America/Buenos_Aires] Loading Sandigrameee
+[03-May-2018 15:06:41 America/Buenos_Aires] Loading Sandigrameee
+[03-May-2018 15:09:04 America/Buenos_Aires] Loading Sandigrameee
+[03-May-2018 15:35:34 America/Buenos_Aires] Loading Sandigrameee
+[03-May-2018 15:38:42 America/Buenos_Aires] Loading Sandigrameee
+[03-May-2018 15:51:49 America/Buenos_Aires] Loading Sandigrameee
+[03-May-2018 16:51:49 America/Buenos_Aires] Loading Sandigrameee
+[04-May-2018 09:16:59 America/Buenos_Aires] Loading Sandigrameee
+[04-May-2018 10:16:58 America/Buenos_Aires] Loading Sandigrameee
+[07-May-2018 09:28:23 America/Buenos_Aires] Loading Sandigrameee
+[07-May-2018 10:48:51 America/Buenos_Aires] Loading Sandigrameee
+[07-May-2018 12:33:52 America/Buenos_Aires] PHP Warning:  Error while sending QUERY packet. PID=4916 in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 36
+[07-May-2018 16:35:30 America/Buenos_Aires] Loading Sandigrameee
+[08-May-2018 09:16:09 America/Buenos_Aires] Loading Sandigrameee
+[08-May-2018 10:31:30 America/Buenos_Aires] PHP Warning:  Error while sending QUERY packet. PID=11120 in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 36
+[08-May-2018 11:04:16 America/Buenos_Aires] Loading Sandigrameee
+[08-May-2018 19:03:24 America/Buenos_Aires] Loading Sandigrameee
+[09-May-2018 09:22:47 America/Buenos_Aires] Loading Sandigrameee
+[09-May-2018 10:37:47 America/Buenos_Aires] PHP Warning:  Error while sending QUERY packet. PID=11096 in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 36
+[10-May-2018 08:32:50 America/Buenos_Aires] Loading Sandigrameee
+[11-May-2018 09:11:56 America/Buenos_Aires] Loading Sandigrameee
+[14-May-2018 09:06:47 America/Buenos_Aires] Loading Sandigrameee
+[14-May-2018 10:38:56 America/Buenos_Aires] Loading Sandigrameee
+[15-May-2018 08:56:58 America/Buenos_Aires] Loading Sandigrameee
+[16-May-2018 08:30:36 America/Buenos_Aires] Loading Sandigrameee
+[16-May-2018 11:51:00 America/Buenos_Aires] PHP Warning:  Error while sending QUERY packet. PID=3296 in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 36
+[16-May-2018 12:06:36 America/Buenos_Aires] Loading Sandigrameee
+[17-May-2018 09:08:36 America/Buenos_Aires] Loading Sandigrameee
+[17-May-2018 11:19:00 America/Buenos_Aires] PHP Warning:  Error while sending QUERY packet. PID=8236 in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 36
+[17-May-2018 12:46:49 America/Buenos_Aires] Loading Sandigrameee
+[18-May-2018 09:07:20 America/Buenos_Aires] Loading Sandigrameee
+[18-May-2018 11:37:49 America/Buenos_Aires] PHP Warning:  Error while sending QUERY packet. PID=16540 in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 36
+[18-May-2018 12:06:40 America/Buenos_Aires] Loading Sandigrameee
+[18-May-2018 12:41:41 America/Buenos_Aires] PHP Warning:  Error while sending QUERY packet. PID=10992 in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 36
+[18-May-2018 13:06:20 America/Buenos_Aires] Loading Sandigrameee
+[21-May-2018 09:17:44 America/Buenos_Aires] Loading Sandigrameee
+[21-May-2018 11:48:14 America/Buenos_Aires] Loading Sandigrameee
+[22-May-2018 08:56:08 America/Buenos_Aires] Loading Sandigrameee
+[22-May-2018 10:06:20 America/Buenos_Aires] Loading Sandigrameee
+[23-May-2018 08:56:16 America/Buenos_Aires] Loading Sandigrameee
+[23-May-2018 14:10:02 America/Buenos_Aires] Loading Sandigrameee
+[23-May-2018 14:36:58 America/Buenos_Aires] Loading Sandigrameee
+[23-May-2018 16:09:22 America/Buenos_Aires] Loading Sandigrameee
+[23-May-2018 16:13:09 America/Buenos_Aires] Loading Sandigrameee
+[24-May-2018 08:28:35 America/Buenos_Aires] Loading Sandigrameee
+[28-May-2018 08:56:55 America/Buenos_Aires] Loading Sandigrameee
+[28-May-2018 08:56:57 America/Buenos_Aires] PHP Warning:  mysqli::__construct(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 26
+[28-May-2018 08:56:57 America/Buenos_Aires] PHP Fatal error:  Failed to conencto to MySQL: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 30
+[28-May-2018 09:36:34 America/Buenos_Aires] Loading Sandigrameee
+[29-May-2018 08:57:20 America/Buenos_Aires] Loading Sandigrameee
+[30-May-2018 08:42:04 America/Buenos_Aires] Loading Sandigrameee
+[31-May-2018 08:53:21 America/Buenos_Aires] Loading Sandigrameee
+[31-May-2018 14:28:05 America/Buenos_Aires] Loading Sandigrameee
+[01-Jun-2018 08:47:31 America/Buenos_Aires] Loading Sandigrameee
+[04-Jun-2018 08:53:05 America/Buenos_Aires] Loading Sandigrameee
+[05-Jun-2018 08:51:13 America/Buenos_Aires] Loading Sandigrameee
+[06-Jun-2018 08:52:42 America/Buenos_Aires] Loading Sandigrameee
+[07-Jun-2018 08:53:49 America/Buenos_Aires] Loading Sandigrameee
+[08-Jun-2018 08:58:32 America/Buenos_Aires] Loading Sandigrameee
+[11-Jun-2018 08:56:35 America/Buenos_Aires] Loading Sandigrameee
+[11-Jun-2018 13:43:07 America/Buenos_Aires] Loading Sandigrameee
+[12-Jun-2018 08:53:08 America/Buenos_Aires] Loading Sandigrameee
+[13-Jun-2018 08:57:08 America/Buenos_Aires] Loading Sandigrameee
+[13-Jun-2018 08:57:11 America/Buenos_Aires] PHP Warning:  mysqli::__construct(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 26
+[13-Jun-2018 08:57:11 America/Buenos_Aires] PHP Fatal error:  Failed to conencto to MySQL: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 30
+[13-Jun-2018 13:10:58 America/Buenos_Aires] Loading Sandigrameee
+[14-Jun-2018 09:53:32 America/Buenos_Aires] Loading Sandigrameee
+[14-Jun-2018 09:53:34 America/Buenos_Aires] PHP Warning:  mysqli::__construct(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 26
+[14-Jun-2018 09:53:34 America/Buenos_Aires] PHP Fatal error:  Failed to conencto to MySQL: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 30
+[14-Jun-2018 10:01:04 America/Buenos_Aires] Loading Sandigrameee
+[14-Jun-2018 10:01:06 America/Buenos_Aires] PHP Warning:  mysqli::__construct(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 26
+[14-Jun-2018 10:01:06 America/Buenos_Aires] PHP Fatal error:  Failed to conencto to MySQL: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 30
+[14-Jun-2018 10:03:48 America/Buenos_Aires] Loading Sandigrameee
+[15-Jun-2018 09:18:14 America/Buenos_Aires] Loading Sandigrameee
+[15-Jun-2018 09:18:16 America/Buenos_Aires] PHP Warning:  mysqli::__construct(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 26
+[15-Jun-2018 09:18:16 America/Buenos_Aires] PHP Fatal error:  Failed to conencto to MySQL: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 30
+[15-Jun-2018 09:29:40 America/Buenos_Aires] Loading Sandigrameee
+[18-Jun-2018 08:50:13 America/Buenos_Aires] Loading Sandigrameee
+[18-Jun-2018 08:50:15 America/Buenos_Aires] PHP Warning:  mysqli::__construct(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 26
+[18-Jun-2018 08:50:15 America/Buenos_Aires] PHP Fatal error:  Failed to conencto to MySQL: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 30
+[18-Jun-2018 09:31:20 America/Buenos_Aires] Loading Sandigrameee
+[19-Jun-2018 08:49:42 America/Buenos_Aires] Loading Sandigrameee
+[21-Jun-2018 08:56:51 America/Buenos_Aires] Loading Sandigrameee
+[22-Jun-2018 10:38:23 America/Buenos_Aires] Loading Sandigrameee
+[22-Jun-2018 10:48:39 America/Buenos_Aires] Loading Sandigrameee
+[25-Jun-2018 08:24:52 America/Buenos_Aires] Loading Sandigrameee
+[26-Jun-2018 08:54:43 America/Buenos_Aires] Loading Sandigrameee
+[27-Jun-2018 09:00:33 America/Buenos_Aires] Loading Sandigrameee
+[27-Jun-2018 09:00:35 America/Buenos_Aires] PHP Warning:  mysqli::__construct(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 26
+[27-Jun-2018 09:00:35 America/Buenos_Aires] PHP Fatal error:  Failed to conencto to MySQL: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Database.php on line 30
+[27-Jun-2018 13:25:03 America/Buenos_Aires] Loading Sandigrameee
+[28-Jun-2018 08:57:05 America/Buenos_Aires] Loading Sandigrameee
+[28-Jun-2018 09:26:01 America/Buenos_Aires] Loading Sandigrameee

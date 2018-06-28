@@ -25,6 +25,27 @@ class Manage_Posts {
         }
         return $posts;
     }
+    
+    public function getPostsWithError() {
+
+        $db = Database::getInstance();
+        $mysqli = $db->getConnection();
+
+        $sql_posts = "SELECT p.id, id_estado,id_tipo, p.nombre, texto, pregunta, respuesta_1, respuesta_2, pos_x, pos_y, fecha_publicacion, nombre_archivo,ruta_completa,es_imagen,user,password "
+                . "FROM sandigram.publicaciones p "
+                . "LEFT JOIN medios m ON m.id = p.id_medio "
+                . "LEFT JOIN cuentas c on p.id_cuenta = c.id "
+                . "WHERE p.id_estado = 3 ;";
+        $result = $mysqli->query($sql_posts);
+        $posts = array();
+
+        if ($result) {
+            while ($post = $result->fetch_object("Post")) {
+                $posts[] = $post;
+            }
+        }
+        return $posts;
+    }
 
     public function updateServiceLastSeen() {
         echo "Actualizo Last seen.. \n\n";
