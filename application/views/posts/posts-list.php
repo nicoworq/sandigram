@@ -116,6 +116,9 @@ function getLabelColor($id_estado) {
         case 3:
             $color = "uk-label-danger";
             break;
+        case 4:
+            $color = "uk-label-warning";
+            break;
     }
     return $color;
 }

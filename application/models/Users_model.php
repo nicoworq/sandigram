@@ -10,6 +10,38 @@ class Users_model extends CI_Model {
         $this->load->library('session');
     }
 
+    public function get_users() {
+
+        $query = $this->db->get($this->table_name);
+
+        return $query->result();
+    }
+
+    public function get_user($id) {
+
+        $query = $this->db->get_where($this->table_name, array('id' => $id), 1);
+
+        return $query->result();
+    }
+
+    public function new_user($nombre, $email, $password, $superadmin) {
+
+        $sql_insert = "INSERT INTO {$this->table_name} (nombre,email,password,superadmin) VALUES (?, ? , ? , ?) ";
+
+        $this->db->query($sql_insert, array($nombre, $email, md5($password), $superadmin));
+
+        return $this->db->affected_rows();
+    }
+
+    public function edit_user($id, $nombre, $email, $password, $superadmin) {
+
+        $sql_insert = "UPDATE {$this->table_name} SET nombre = ?,email = ?,password = ?,superadmin = ? WHERE id = ? ";
+
+        $this->db->query($sql_insert, array($nombre, $email, md5($password), $superadmin, $id));
+
+        return $this->db->affected_rows();
+    }
+
     public function validate_user($email, $password) {
 
         $user = $this->get_user_by_email($email);
@@ -33,12 +65,12 @@ class Users_model extends CI_Model {
         }
     }
 
-    public function set_active($user) {        
+    public function set_active($user) {
         $this->session->set_userdata("logged_user", $user);
         session_write_close();
     }
 
-    public function get_active() {        
+    public function get_active() {
         return $this->session->logged_user;
     }
 

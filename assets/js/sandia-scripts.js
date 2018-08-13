@@ -119,7 +119,7 @@ $(document).ready(function (e) {
         console.log("transpolo x")
         $("#poll-preview").css("left", transpolarXaPx(parseFloat($("#form-post input[name=pos_x]").val())));
     }
-   
+
     if ($("#form-post input[name=pos_y]").val()) {
         console.log("transpolo y")
         $("#poll-preview").css("top", transpolarYaPx(parseFloat($("#form-post input[name=pos_y]").val())));
@@ -238,6 +238,32 @@ $(document).ready(function (e) {
         console.log("changeee");
 
     });
+
+    //usuario nuevo
+
+    $(".validate-input").keyup(function () {
+        console.log("keydown")
+        var formValid = true;
+
+        $(".validate-input").each(function (i, input) {
+
+            if ($(input).val() == "") {
+                formValid = false;
+            }
+                       
+
+        });
+
+        if (formValid) {
+            $("button").removeAttr("disabled");
+        } else {
+            $("button").attr("disabled", true);
+        }
+        
+        
+        
+    });
+
 
 });
 

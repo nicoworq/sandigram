@@ -84,6 +84,7 @@ class Manage_Posts {
         }
         try {
             echo "Publicando post... \n\n";
+            $this->updatePostStatus($post, 4);
             $media = $this->prepareMedia($post);
 
             switch (intval($post->id_tipo)) {

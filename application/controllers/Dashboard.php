@@ -8,6 +8,7 @@ class Dashboard extends CI_Controller {
         parent::__construct();
         $this->load->library('session');
         $this->load->model("Posts_model", "Posts");
+        $this->load->model("Users_model", "Users");
     }
 
     public function index() {

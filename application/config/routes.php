@@ -80,6 +80,20 @@ $route['posts/new-post'] = "posts/new_post";
 $route['posts/new-post-action'] = "posts/new_post_action";
 $route['posts/delete-post/(:num)'] = "posts/delete_post_action/$1";
 
+//USERS
+
+$route['users'] = "users";
+$route['users/(:num)'] = "users/edit_user/$1";
+$route['users/new'] = "users/new_user";
+$route['users/new-user-action'] = "users/new_user_action";
+$route['users/edit-user-action'] = "users/edit_user_action";
+
+
+
+
+//LOGOUT
+$route['logout'] = 'logout';
+
 
 //MEDIA
 $route['media'] = "media";

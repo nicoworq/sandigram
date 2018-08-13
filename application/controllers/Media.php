@@ -10,6 +10,7 @@ class Media extends CI_Controller {
         $this->load->helper(array('form', 'url'));
         $this->load->model("Medias_model", "Medias");
         $this->load->model("Accounts_model", "Accounts");
+        $this->load->model("Users_model", "Users");
         $this->activeAccount = $this->Accounts->get_active();
     }
 
