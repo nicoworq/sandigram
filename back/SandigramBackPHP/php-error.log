@@ -270,3 +270,54 @@
 [09-Aug-2018 07:43:12 America/Buenos_Aires] Loading Sandigrameee
 [10-Aug-2018 09:03:18 America/Buenos_Aires] Loading Sandigrameee
 [13-Aug-2018 08:53:59 America/Buenos_Aires] Loading Sandigrameee
+[13-Aug-2018 13:28:17 America/Buenos_Aires] Loading Sandigrameee
+[14-Aug-2018 08:49:04 America/Buenos_Aires] Loading Sandigrameee
+[14-Aug-2018 08:49:04 America/Buenos_Aires] PHP Fatal error:  Uncaught Error: Class 'Database' not found in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php:51
+Stack trace:
+#0 C:\xampp\htdocs\sandigram\back\SandigramBackPHP\index.php(23): Manage_Posts->updateServiceLastSeen()
+#1 {main}
+  thrown in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 51
+[14-Aug-2018 10:59:35 America/Buenos_Aires] Loading Sandigrameee
+[14-Aug-2018 10:59:35 America/Buenos_Aires] PHP Fatal error:  Uncaught Error: Class 'Database' not found in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php:51
+Stack trace:
+#0 C:\xampp\htdocs\sandigram\back\SandigramBackPHP\index.php(23): Manage_Posts->updateServiceLastSeen()
+#1 {main}
+  thrown in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 51
+[14-Aug-2018 11:09:24 America/Buenos_Aires] Loading Sandigrameee
+[14-Aug-2018 11:09:24 America/Buenos_Aires] PHP Fatal error:  Uncaught Error: Class 'Database' not found in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php:51
+Stack trace:
+#0 C:\xampp\htdocs\sandigram\back\SandigramBackPHP\index.php(23): Manage_Posts->updateServiceLastSeen()
+#1 {main}
+  thrown in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 51
+[14-Aug-2018 13:08:42 America/Buenos_Aires] Loading Sandigrameee
+[14-Aug-2018 13:08:42 America/Buenos_Aires] PHP Fatal error:  Uncaught Error: Class 'Database' not found in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php:51
+Stack trace:
+#0 C:\xampp\htdocs\sandigram\back\SandigramBackPHP\index.php(23): Manage_Posts->updateServiceLastSeen()
+#1 {main}
+  thrown in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 51
+[15-Aug-2018 08:49:03 America/Buenos_Aires] Loading Sandigrameee
+[15-Aug-2018 08:49:03 America/Buenos_Aires] PHP Fatal error:  Uncaught Error: Class 'Database' not found in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php:51
+Stack trace:
+#0 C:\xampp\htdocs\sandigram\back\SandigramBackPHP\index.php(23): Manage_Posts->updateServiceLastSeen()
+#1 {main}
+  thrown in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 51
+[15-Aug-2018 09:22:04 America/Buenos_Aires] Loading Sandigrameee
+[15-Aug-2018 09:22:04 America/Buenos_Aires] PHP Fatal error:  Uncaught Error: Class 'Database' not found in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php:51
+Stack trace:
+#0 C:\xampp\htdocs\sandigram\back\SandigramBackPHP\index.php(23): Manage_Posts->updateServiceLastSeen()
+#1 {main}
+  thrown in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 51
+[15-Aug-2018 13:34:24 America/Buenos_Aires] Loading Sandigrameee
+[15-Aug-2018 13:34:24 America/Buenos_Aires] PHP Fatal error:  Uncaught Error: Class 'Database' not found in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php:51
+Stack trace:
+#0 C:\xampp\htdocs\sandigram\back\SandigramBackPHP\index.php(23): Manage_Posts->updateServiceLastSeen()
+#1 {main}
+  thrown in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 51
+[15-Aug-2018 13:34:50 America/Buenos_Aires] Loading Sandigrameee
+[15-Aug-2018 13:34:50 America/Buenos_Aires] PHP Fatal error:  Uncaught Error: Class 'Database' not found in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php:51
+Stack trace:
+#0 C:\xampp\htdocs\sandigram\back\SandigramBackPHP\index.php(23): Manage_Posts->updateServiceLastSeen()
+#1 {main}
+  thrown in C:\xampp\htdocs\sandigram\back\SandigramBackPHP\classes\Manage_Posts.php on line 51
+[15-Aug-2018 13:36:21 America/Buenos_Aires] Loading Sandigrameee
+[15-Aug-2018 13:36:29 America/Buenos_Aires] Loading Sandigrameee

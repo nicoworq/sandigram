@@ -1,7 +1,5 @@
 <?php
 
-include_once 'Database.php';
-include_once 'Errores.php';
 
 class Manage_Posts {
 
@@ -66,8 +64,7 @@ class Manage_Posts {
 
     public function publishPost($post) {
 
-        require 'vendor/autoload.php';
-
+       
         \InstagramAPI\Instagram::$allowDangerousWebUsageAtMyOwnRisk = true;
 
         $ig = new \InstagramAPI\Instagram();
@@ -80,6 +77,7 @@ class Manage_Posts {
         } catch (\Exception $e) {
             $Errores->logError($post->id, FALSE, "Error al loguear || " . $e->getMessage());
             echo 'Error al loguear: ' . $e->getMessage() . "\n";
+            $this->updatePostStatus($post, 5);
             exit(0);
         }
         try {

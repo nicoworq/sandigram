@@ -11,10 +11,11 @@ ini_set("log_errors", 1);
 ini_set("error_log", "php-error.log");
 error_log("Loading Sandigrameee");
 
-
-
 include_once 'classes/Post.php';
+include_once 'classes/Database.php';
+include_once 'classes/Errores.php';
 include_once 'classes/Manage_Posts.php';
+require_once 'vendor/autoload.php';
 
 $manage = new Manage_Posts();
 

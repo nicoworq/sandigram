@@ -40,7 +40,7 @@ class Post {
 
         $now = new DateTime();
         $fecha_publicacion_date = new DateTime($this->fecha_publicacion);
-        $diff = abs($fecha_publicacion_date->getTimestamp() - $now->getTimestamp()) / 60;
+        $diff = ($fecha_publicacion_date->getTimestamp() - $now->getTimestamp()) / 60;
         if ($diff < 10) {
             return TRUE;
         }
